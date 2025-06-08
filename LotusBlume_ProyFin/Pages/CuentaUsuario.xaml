@@ -9,15 +9,7 @@
     <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- Encabezado con Logo y barra de búsqueda -->
-        <HorizontalStackLayout BackgroundColor="Black" Spacing="5" VerticalOptions="Center" Padding="10">
-            <Image Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="60"/>
-            <Frame BackgroundColor="#F0F0F0" CornerRadius="100" HeightRequest="55" WidthRequest="280" HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand">
-                <HorizontalStackLayout Spacing="10">
-                    <Image Source="lupa.png" HeightRequest="24" WidthRequest="24" />
-                    <Entry Placeholder="¿Algo en mente?" HeightRequest="250" WidthRequest="315" FontSize="14"/>
-                </HorizontalStackLayout>
-            </Frame>
-        </HorizontalStackLayout>
+        <views:Header Grid.Row="0" HeightRequest="81"/>
 
         <!-- Contenido -->
         <ScrollView Grid.Row="1">

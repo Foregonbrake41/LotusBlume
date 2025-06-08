@@ -6,4 +6,9 @@ public partial class Header : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void ClickedPrincipal(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///Principal");
+    }
 }
