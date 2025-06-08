@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.PantallaDeCarga"
+             Title="PantallaDeCarga"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    
+    <Grid Padding="30" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Logo de Lotus Blume -->
+        <Image x:Name="LogoImage"
+               Source="logo_lotusblume.jpg"
+               HeightRequest="200"
+               HorizontalOptions="Center"
+               VerticalOptions="End"/>
+
+        <!-- Texto de bienvenida -->
+        <Label Grid.Row="1"
+               Text="¡Bienvenido a Lotus Blume!"
+               FontSize="28"
+               FontFamily="Inter"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black" 
+               Margin="25,0,25,10"/>
+
+        <!-- Ruedita de cargando -->
+        <ActivityIndicator Grid.Row="1"
+                           IsRunning="True"
+                           IsVisible="True"
+                           Color="DarkGray"
+                           HorizontalOptions="Center"
+                           HeightRequest="120"
+                           WidthRequest="120" 
+                           Margin="25,120,25,50"/>
+
+        <!-- Texto de cargando -->
+        <Label Grid.Row="2"
+               Text="Cargando..."
+               FontFamily="Inter"
+               FontSize="20"
+               HorizontalOptions="Center"
+               TextColor="Gray" />
+
+        <!-- Texto de espera -->
+        <Label Grid.Row="3"
+               Text="Espere un momento"
+               FontFamily="Inter"
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="DarkGray" />
+    </Grid>
+
+</ContentPage>

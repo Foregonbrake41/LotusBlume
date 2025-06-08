@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.InicioSesion"
+             Title="InicioSesion"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <!-- Encabezado Lotus Blume -->
+            <HorizontalStackLayout BackgroundColor="Black" Padding="120,10" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,20">
+                <Image Source="logo_lotusblume.jpg"
+                       HeightRequest="80"
+                       WidthRequest="80"
+                       VerticalOptions="Center" />
+                <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                    <Label Text="Lotus Blume"
+                           FontSize="26"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                    <Label Text="Tienda de ropa"
+                           FontSize="16"
+                           FontFamily="Inter"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            
+            <!-- Titulo e imagen de la pagina -->
+            <Label Text="Inicio de sesion"
+                   FontSize="36"
+                   FontFamily="Inter"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Padding="15"/>
+            <Image Source="logo_usuario.png"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,30"/>
+
+            <!-- Campo Usuario -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_usuario_completo.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Usuario:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su usuario"
+                           x:Name="entryUsuario"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="375"/>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Campo Contraseña (en este tambien haz que funcione el ojito para que se vea o no la contraseña la imagen se llama "visible_contrasena.png")-->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,10">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="candado_contrasena.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Contraseña:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5">
+                <Frame Grid.Column="0" HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="365">
+                    <Entry Placeholder="Ingrese su contraseña"
+                           x:Name="entryPassword"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="340"/>
+                </Frame>
+                <Image Source="invisible_contrasena.png"
+                               HeightRequest="26"
+                               WidthRequest="26"
+                               Grid.Column="1"
+                               VerticalOptions="Center"
+                               Margin="5"
+                               GestureRecognizers="{TapGestureRecognizer Command={Binding TogglePasswordCommand}}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Recuperar contraseña -->
+            <Label Text="¿Olvidaste tu contraseña?"
+                   FontSize="14"
+                   FontFamily="Inter"
+                   TextColor="#6C63FF"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   GestureRecognizers="{TapGestureRecognizer Command={Binding NavegarARecuperarCommand}}" 
+                   Margin="40,0,0,15"/>
+
+            <!-- Botón Ingresar -->
+            <Button Text="Ingresar"
+                    x:Name="btnIngresar"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    FontFamily="Inter"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="100"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Margin="40,10,40,10"/>
+
+            <!-- Enlace de registro -->
+            <Label HorizontalOptions="Center"
+                   FontFamily="Inter"
+                   FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿Aún no tienes cuenta? " />
+                        <Span Text="Regístrate"
+                              TextColor="#6C63FF"
+                              FontAttributes="Bold"
+                              GestureRecognizers="{TapGestureRecognizer Command={Binding NavegarARegistroCommand}}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

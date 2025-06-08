@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.Principal"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Encabezado con Logo y barra de búsqueda -->
+        <HorizontalStackLayout BackgroundColor="Black" Spacing="5" VerticalOptions="Center" Padding="10">
+            <Image Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="60"/>
+            <Frame BackgroundColor="#F0F0F0" CornerRadius="100" HeightRequest="55" WidthRequest="280" HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand">
+                <HorizontalStackLayout Spacing="10" >
+                    <Image Source="lupa.png" HeightRequest="24" WidthRequest="24" />
+                    <Entry Placeholder="¿Algo en mente?" HeightRequest="250" WidthRequest="315" FontSize="14"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="20" Padding="20">
+
+                <!-- Título -->
+                <Label Text="Hola, Bienvenido"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       FontFamily="Inter"
+                       TextColor="Black" />
+
+                <Label Text="¡Ya contamos con vestidos de XV!"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       FontFamily="Inter"
+                       TextColor="Black" />
+
+                <!-- Carrusel de vestidos XV -->
+                <CarouselView HeightRequest="300" Loop="True" IndicatorView="indicatorDestacados">
+                    <CarouselView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>vestido_xv_1.png</x:String>
+                            <x:String>vestido_xv_2.png</x:String>
+                            <x:String>vestido_xv_3.png</x:String>
+                        </x:Array>
+                    </CarouselView.ItemsSource>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0" HasShadow="False" CornerRadius="10" Margin="10,0">
+                                <Image Source="{Binding .}" Aspect="AspectFill" HeightRequest="290" WidthRequest="200"/>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="indicatorDestacados" HorizontalOptions="Center" />
+
+                <!-- Sección: ¿Alguna fiesta esta noche? -->
+                <Label Text="¿Alguna fiesta esta noche?"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       FontFamily="Inter"
+                       TextColor="Black" />
+                <ScrollView Orientation="Horizontal" HeightRequest="220">
+                    <HorizontalStackLayout Spacing="10">
+                        <VerticalStackLayout>
+                            <Image Source="vestido_noche_1.png" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Brilla con elegancia" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_noche_2.png" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Glamour que enamora" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_noche_3.png" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Luces, cámara... tú" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_noche_4.png" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Perfecta para la ocasión" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_noche_5.png" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Destaca esta noche" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+                <!-- Sección: ¡Pic-nic por la tarde! -->
+                <Label Text="¡Pic-nic por la tarde!"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       FontFamily="Inter"
+                       TextColor="Black" />
+                <ScrollView Orientation="Horizontal" HeightRequest="220">
+                    <HorizontalStackLayout Spacing="10">
+                        <VerticalStackLayout>
+                            <Image Source="vestido_picnic_1.jpg" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Frescura y encanto" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_picnic_2.jpg" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Color para tu tarde" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_picnic_3.jpg" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Dulce y delicada" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_picnic_4.jpg" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Naturalmente tú" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Image Source="vestido_picnic_5.jpg" HeightRequest="160" WidthRequest="120" />
+                            <Label Text="Estilo sin esfuerzo" FontSize="12" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+        <Grid Grid.Row="2" BackgroundColor="#D9D9D9" Padding="10,15" ColumnDefinitions="*,Auto,*,Auto,*,Auto,*" >
+            <Image Source="logo_casita.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="1" VerticalOptions="Center" />
+            <Image Source="corazon.png" HeightRequest="40" WidthRequest="40" Grid.Column="2" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="3" VerticalOptions="Center" />
+            <Image Source="logo_carrito.png" HeightRequest="40" WidthRequest="40" Grid.Column="4" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="5" VerticalOptions="Center" />
+            <Image Source="logo_usuario.png" HeightRequest="40" WidthRequest="40" Grid.Column="6" HorizontalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>

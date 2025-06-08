@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.RegistroDeCuenta"
+             Title="RegistroDeCuenta"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <!-- Encabezado Lotus Blume -->
+            <HorizontalStackLayout BackgroundColor="Black" Padding="120,10" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,20">
+                <Image Source="logo_lotusblume.jpg"
+                       HeightRequest="80"
+                       WidthRequest="80"
+                       VerticalOptions="Center" />
+                <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                    <Label Text="Lotus Blume"
+                           FontSize="26"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                    <Label Text="Tienda de ropa"
+                           FontSize="16"
+                           FontFamily="Inter"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Título e imagen de la página -->
+            <Label Text="Registro de cuenta"
+                   FontSize="36"
+                   FontFamily="Inter"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Padding="15" />
+            <Image Source="logo_registro.jpg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,30" />
+
+            <!-- Campo Nombre -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_usuario.png"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Nombre:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su nombre completo"
+                           x:Name="entryNombre"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="375" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Campo Direccion -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_ubicacion.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Direccion:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su direccion"
+                           x:Name="entryDireccion"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="375" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Campo Correo Electrónico -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_correo.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Correo electrónico:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su correo"
+                           x:Name="entryCorreo"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="375" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Campo Usuario -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_usuario_completo.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Usuario:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su usuario"
+                           x:Name="entryUsuario"
+                           BackgroundColor="Transparent"
+                           HeightRequest="40"
+                           WidthRequest="375" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Campo Contraseña (en este tambien haz que funcione el ojito para que se vea o no la contraseña la imagen se llama "visible_contrasena.png")-->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="candado_contrasena.jpg"
+                           HeightRequest="30"
+                           WidthRequest="30"
+                           HorizontalOptions="Center" />
+                    <Label Text="Contraseña:"
+                           FontSize="20"
+                           FontFamily="Inter"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5">
+                    <Frame Grid.Column="0" HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="365">
+                        <Entry Placeholder="Ingrese su contraseña"
+                               x:Name="entryPassword"
+                               IsPassword="True"
+                               BackgroundColor="Transparent"
+                               HeightRequest="40"
+                               WidthRequest="340" />
+                    </Frame>
+                    <Image Source="invisible_contrasena.png"
+                           HeightRequest="26"
+                           WidthRequest="26"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           Margin="5"
+                           GestureRecognizers="{TapGestureRecognizer Command={Binding TogglePasswordCommand}}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botones de volver y registrar -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,20,0,30">
+                <Button Text="Volver"
+                        x:Name="btnVolver"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        FontFamily="Inter"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="100"
+                        HeightRequest="50"
+                        WidthRequest="200" />
+
+                <Button Text="Registrar"
+                        x:Name="btnRegistrar"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        FontFamily="Inter"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="100"
+                        HeightRequest="50"
+                        WidthRequest="200" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.CuentaUsuario"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Encabezado con Logo y barra de búsqueda -->
+        <HorizontalStackLayout BackgroundColor="Black" Spacing="5" VerticalOptions="Center" Padding="10">
+            <Image Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="60"/>
+            <Frame BackgroundColor="#F0F0F0" CornerRadius="100" HeightRequest="55" WidthRequest="280" HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand">
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="lupa.png" HeightRequest="24" WidthRequest="24" />
+                    <Entry Placeholder="¿Algo en mente?" HeightRequest="250" WidthRequest="315" FontSize="14"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <!-- Contenido -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="25" HorizontalOptions="Center">
+
+                <!-- Imagen de perfil -->
+                <Frame BackgroundColor="#F4F4F4" CornerRadius="100" HeightRequest="180" WidthRequest="180" HasShadow="True" HorizontalOptions="Center">
+                    <Image Source="logo_usuario.png" HeightRequest="150" WidthRequest="150" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Frame>
+
+                <!-- Datos del usuario (tambien se lo pedi a chatgpt, eso ya haces que se refleje de acuerdo a la cuenta)-->
+                <Frame BackgroundColor="#FAFAFA" CornerRadius="20" Padding="20" HasShadow="True" WidthRequest="330">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="Nombre: Mariana Torres" FontSize="16" TextColor="#333"/>
+                        <Label Text="Fecha de nacimiento: 14/02/2005" FontSize="16" TextColor="#333"/>
+                        <Label Text="Teléfono: +52 555 123 4567" FontSize="16" TextColor="#333"/>
+                        <Label Text="Correo: mariana.torres@email.com" FontSize="16" TextColor="#333"/>
+                        <Label Text="Cuenta creada: 01/03/2024" FontSize="16" TextColor="#333"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Botón de cerrar sesión -->
+                <Button Text="Cerrar Sesión"
+                        BackgroundColor="#E53935"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        CornerRadius="18"
+                        Padding="14"
+                        WidthRequest="250"
+                        HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+        <Grid Grid.Row="2" BackgroundColor="#D9D9D9" Padding="10,15" ColumnDefinitions="*,Auto,*,Auto,*,Auto,*">
+            <Image Source="logo_casita.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="1" VerticalOptions="Center" />
+            <Image Source="corazon.png" HeightRequest="40" WidthRequest="40" Grid.Column="2" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="3" VerticalOptions="Center" />
+            <Image Source="logo_carrito.png" HeightRequest="40" WidthRequest="40" Grid.Column="4" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="5" VerticalOptions="Center" />
+            <Image Source="logo_usuario.png" HeightRequest="40" WidthRequest="40" Grid.Column="6" HorizontalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>

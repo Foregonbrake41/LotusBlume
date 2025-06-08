@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.RecuperarContrasena"
+             Title="RecuperarContrasena"
+             BackgroundColor="White"
+            NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <!-- COMENTARIO: como segun yo esta pagina esta cabrona, nadamas ponle que al enviar diga que te salte un alert diciendo que se envio con exito el codigo o algo asi -->
+
+            <!-- Encabezado Lotus Blume -->
+            <HorizontalStackLayout BackgroundColor="Black" Padding="120,10" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,20">
+                <Image Source="logo_lotusblume.jpg"
+                   HeightRequest="80"
+                   WidthRequest="80"
+                   VerticalOptions="Center" />
+                <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                    <Label Text="Lotus Blume"
+                       FontSize="26"
+                       FontFamily="Inter"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+                    <Label Text="Tienda de ropa"
+                       FontSize="16"
+                       FontFamily="Inter"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Título e imagen de la página -->
+            <Label Text="Recuperar contraseña"
+               FontSize="36"
+               FontFamily="Inter"
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               Padding="15" />
+            <Image Source="logo_recuperar_contrasena.jpg"
+               HeightRequest="200"
+               WidthRequest="200"
+               HorizontalOptions="Center"
+               Margin="0,0,0,50" />
+
+            <!-- Texto explicativo central -->
+            <Label Text="Por favor, ingresa tu correo electrónico. Te enviaremos un código temporal para que puedas restablecer tu contraseña de forma segura."
+                   FontSize="16"
+                   FontFamily="Inter"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="30,0,30,50" />
+
+
+            <!-- Campo Correo Electrónico -->
+            <VerticalStackLayout Spacing="5" Margin="40,5,40,50">
+                <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
+                    <Image Source="logo_correo.jpg"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                       HorizontalOptions="Center" />
+                    <Label Text="Correo electrónico:"
+                       FontSize="20"
+                       FontFamily="Inter"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
+                    <Entry Placeholder="Ingrese su correo"
+                       x:Name="entryCorreo"
+                       BackgroundColor="Transparent"
+                       HeightRequest="40"
+                       WidthRequest="375" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Botones de volver y enviar -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,20,0,30">
+                <Button Text="Volver"
+                    x:Name="btnVolver"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    FontFamily="Inter"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="100"
+                    HeightRequest="50"
+                    WidthRequest="200" />
+
+                <Button Text="Enviar"
+                    x:Name="btnEnviar"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    FontFamily="Inter"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="100"
+                    HeightRequest="50"
+                    WidthRequest="200" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

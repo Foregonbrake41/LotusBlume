@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotusBlume_ProyFin.Pages.Carrito"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Encabezado con Logo y barra de búsqueda -->
+        <HorizontalStackLayout BackgroundColor="Black" Spacing="5" VerticalOptions="Center" Padding="10">
+            <Image Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="60"/>
+            <Frame BackgroundColor="#F0F0F0" CornerRadius="100" HeightRequest="55" WidthRequest="280" HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand">
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="lupa.png" HeightRequest="24" WidthRequest="24" />
+                    <Entry Placeholder="¿Algo en mente?" HeightRequest="250" WidthRequest="315" FontSize="14"/>
+                </HorizontalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <!-- Contenido del carrito -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <Label Text="Tu Carrito" FontSize="26" FontAttributes="Bold" TextColor="Black" />
+
+                <!-- Producto en carrito -->
+                <Frame CornerRadius="15" Padding="15" BackgroundColor="#F9F9F9" HasShadow="True">
+                    <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="15">
+
+                        <!-- Imagen del producto -->
+                        <Image Source="vestido_noche_1.png" HeightRequest="150" WidthRequest="100" Aspect="AspectFill" Grid.RowSpan="2" />
+
+                        <!-- Nombre y precio -->
+                        <Label Text="Vestido Elegancia Nocturna"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="#333"
+                               Grid.Column="1"
+                               Grid.Row="0" />
+
+                        <Label Text="$1,899 MXN"
+                               FontSize="16"
+                               TextColor="#E91E63"
+                               FontAttributes="Bold"
+                               Grid.Column="2"
+                               Grid.Row="0"
+                               VerticalOptions="Center" />
+
+                        <!-- Cantidad (en este se tiene que reflejar el dato de cuantos compro anteriormente)-->
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="1" Spacing="10">
+                            <Label Text="Cantidad:" FontSize="14" VerticalOptions="Center"/>
+                            <Label Text="n" FontSize="14" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <!-- Eliminar icono (este lo puse por si quiere eliminar el producto de favoritos, y ya que se elimine de la lista)-->
+                        <Image Source="trash_icon.png"
+                               HeightRequest="24"
+                               WidthRequest="24"
+                               Grid.Column="2"
+                               Grid.Row="1"
+                               VerticalOptions="Center"
+                               HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Total y botón de compra -->
+                <Grid ColumnDefinitions="*,Auto" Padding="10,0">
+                    <Label Text="Total: " FontSize="18" TextColor="#444" VerticalOptions="Center"/>
+                    <Label Text="$1,899 MXN" FontSize="20" FontAttributes="Bold" TextColor="DarkRed" Grid.Column="1"/>
+                </Grid>
+
+                <Button Text="Finalizar Compra"
+                        BackgroundColor="#424242"
+                        TextColor="White"
+                        FontSize="18"
+                        CornerRadius="15"
+                        Padding="12"/>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+        <Grid Grid.Row="2" BackgroundColor="#D9D9D9" Padding="10,15" ColumnDefinitions="*,Auto,*,Auto,*,Auto,*">
+            <Image Source="logo_casita.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="1" VerticalOptions="Center" />
+            <Image Source="corazon.png" HeightRequest="40" WidthRequest="40" Grid.Column="2" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="3" VerticalOptions="Center" />
+            <Image Source="logo_carrito.png" HeightRequest="40" WidthRequest="40" Grid.Column="4" HorizontalOptions="Center" />
+            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="5" VerticalOptions="Center" />
+            <Image Source="logo_usuario.png" HeightRequest="40" WidthRequest="40" Grid.Column="6" HorizontalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>
