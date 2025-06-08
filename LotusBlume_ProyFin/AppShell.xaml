@@ -7,13 +7,19 @@
     Shell.FlyoutBehavior="Disabled"
     Title="LotusBlume_ProyFin">
 
+    <Shell.NavBarIsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="iOS, Android" Value="False"/>
+        </OnPlatform>
+    </Shell.NavBarIsVisible>
+    
+    <ShellContent Route="PantallaDeCarga" ContentTemplate="{DataTemplate local:PantallaDeCarga}" />
     <ShellContent Route="Articulos" ContentTemplate="{DataTemplate local:Articulos}" />
     <ShellContent Route="Carrito" ContentTemplate="{DataTemplate local:Carrito}" />
     <ShellContent Route="Catalogo" ContentTemplate="{DataTemplate local:Carrito}" />
     <ShellContent Route="CuentaUsuario" ContentTemplate="{DataTemplate local:CuentaUsuario}" />
     <ShellContent Route="Favoritos" ContentTemplate="{DataTemplate local:Favoritos}" />
     <ShellContent Route="InicioSesion" ContentTemplate="{DataTemplate local:InicioSesion}" />
-    <ShellContent Route="PantallaDeCarga" ContentTemplate="{DataTemplate local:PantallaDeCarga}" />
     <ShellContent Route="Principal" ContentTemplate="{DataTemplate local:Principal}" />
     <ShellContent Route="RecuperarContrasena" ContentTemplate="{DataTemplate local:RecuperarContrasena}" />
     <ShellContent Route="RegistroDeCuenta" ContentTemplate="{DataTemplate local:RegistroDeCuenta}" />
