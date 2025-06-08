@@ -9,7 +9,7 @@ namespace LotusBlume_ProyFin
         {
             InitializeComponent();
 
-            MainPage = new Pages.CuentaUsuario();
+            MainPage = new AppShell();
         }
     }
 }

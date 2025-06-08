@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:LotusBlume_ProyFin.Pages"
              x:Class="LotusBlume_ProyFin.Pages.Carrito"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
@@ -80,14 +81,6 @@
         </ScrollView>
 
         <!-- Barra de navegación inferior -->
-        <Grid Grid.Row="2" BackgroundColor="#D9D9D9" Padding="10,15" ColumnDefinitions="*,Auto,*,Auto,*,Auto,*">
-            <Image Source="logo_casita.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" HorizontalOptions="Center" />
-            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="1" VerticalOptions="Center" />
-            <Image Source="corazon.png" HeightRequest="40" WidthRequest="40" Grid.Column="2" HorizontalOptions="Center" />
-            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="3" VerticalOptions="Center" />
-            <Image Source="logo_carrito.png" HeightRequest="40" WidthRequest="40" Grid.Column="4" HorizontalOptions="Center" />
-            <BoxView Color="Gray" WidthRequest="1" HeightRequest="30" Grid.Column="5" VerticalOptions="Center" />
-            <Image Source="logo_usuario.png" HeightRequest="40" WidthRequest="40" Grid.Column="6" HorizontalOptions="Center" />
-        </Grid>
+        <views:Navbar Grid.Row="2"/>
     </Grid>
 </ContentPage>
