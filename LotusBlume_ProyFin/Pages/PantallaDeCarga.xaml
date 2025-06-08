@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LotusBlume_ProyFin.Pages.PantallaDeCarga"
              Title="PantallaDeCarga"
-             BackgroundColor="White"
+             BackgroundColor="Black"
              NavigationPage.HasNavigationBar="False">
     
     <Grid Padding="30" RowSpacing="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
+            <RowDefinition Height="2.25*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -27,8 +27,9 @@
                FontSize="28"
                FontFamily="Inter"
                FontAttributes="Bold"
-               HorizontalOptions="Center"
-               TextColor="Black" 
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="White" 
                Margin="25,0,25,10"/>
 
         <!-- Ruedita de cargando -->
@@ -43,7 +44,7 @@
 
         <!-- Texto de cargando -->
         <Label Grid.Row="2"
-               Text="Cargando..."
+               Text=" Cargando..."
                FontFamily="Inter"
                FontSize="20"
                HorizontalOptions="Center"
