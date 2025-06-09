@@ -21,7 +21,7 @@ namespace LotusBlume_ProyFin.Services
 
                 // Crea las tablas si no existen
                 _db.CreateTableAsync<Vestidos>().Wait();
-                _db.CreateTableAsync<Usuario>().Wait();
+                _db.CreateTableAsync<Usuarios>().Wait();
 
                 Debug.WriteLine("✅ Base de datos creada en: " + dbPath);
             }
@@ -45,18 +45,18 @@ namespace LotusBlume_ProyFin.Services
                 return await _db.UpdateAsync(vestido);
         }
 
-        public async Task<int> DeleteVestidoAsync(Vestidos vestido)
+            public async Task<int> DeleteVestidoAsync(Vestidos vestido)
         {
             return await _db.DeleteAsync<Vestidos>(vestido.Id);
         }
 
         // Métodos para Usuarios
-        public async Task<Usuario> GetUsuarioAsync(string email)
+        public async Task<Usuarios> GetUsuarioAsync(string email)
         {
-            return await _db.Table<Usuario>().FirstOrDefaultAsync(u => u.Email == email);
+            return await _db.Table<Usuarios>().FirstOrDefaultAsync(u => u.Email == email);
         }
 
-        public async Task<int> SaveUsuarioAsync(Usuario usuario)
+        public async Task<int> SaveUsuarioAsync(Usuarios usuario)
         {
             if (usuario.Id == 0)
                 return await _db.InsertAsync(usuario);

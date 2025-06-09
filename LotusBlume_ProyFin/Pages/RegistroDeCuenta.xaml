@@ -152,7 +152,7 @@
                 <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
                     <Grid>
                         <!-- Usamos Grid para organizar Entry + Image -->
-                        <Entry x:Name="entryPassword" 
+                        <Entry x:Name="entryContrasena" 
                             Placeholder="Ingrese su contraseña"
                             IsPassword="True"
                             BackgroundColor="Transparent"
@@ -198,6 +198,7 @@
                         FontAttributes="Bold"
                         CornerRadius="100"
                         HeightRequest="50"
+                        Clicked="OnRegistrarClicked"
                         WidthRequest="180" />
             </HorizontalStackLayout>
 

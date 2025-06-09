@@ -52,11 +52,11 @@
             <!-- Campo Usuario -->
             <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
                 <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
-                    <Image Source="logo_usuario_completo.jpg"
+                    <Image Source="logo_correo.jpg"
                            HeightRequest="30"
                            WidthRequest="30"
                            HorizontalOptions="Center" />
-                    <Label Text="Usuario:"
+                    <Label Text="Correo:"
                            FontSize="20"
                            FontFamily="Inter"
                            FontAttributes="Bold"
@@ -65,7 +65,7 @@
                 </HorizontalStackLayout>
                 <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
                     <Entry Placeholder="Ingrese su usuario"
-                           x:Name="entryUsuario"
+                           x:Name="entryCorreo"
                            BackgroundColor="Transparent"
                            HeightRequest="40"
                            WidthRequest="375"/>
@@ -89,7 +89,7 @@
                 <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
                     <Grid>
                         <!-- Usamos Grid para organizar Entry + Image -->
-                        <Entry x:Name="entryPassword" 
+                        <Entry x:Name="entryContrasena" 
             Placeholder="Ingrese su contraseña"
             IsPassword="True"
             BackgroundColor="Transparent"

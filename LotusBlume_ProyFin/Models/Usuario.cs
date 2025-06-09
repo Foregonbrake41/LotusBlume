@@ -8,15 +8,15 @@ using SQLite;
 namespace LotusBlume_ProyFin.Models
 {
     [Table("Usuarios")]
-    public class Usuario
+    public class Usuarios
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        [Unique, MaxLength(50)]
+        public string Nombre { get; set; }
+        public string Direccion { get; set; }
         public string Email { get; set; }
-
-        [MaxLength(100)]
-        public string PasswordHash { get; set; } // ¡Nunca guardes contraseñas en texto plano!
+        public string Usuario { get; set; }
+        public string Contrasena { get; set; }
     }
 }
