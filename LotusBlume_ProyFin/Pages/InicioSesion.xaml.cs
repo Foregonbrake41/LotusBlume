@@ -27,6 +27,7 @@ public partial class InicioSesion : ContentPage
             await DisplayAlert("Bienvenido", $"Hola {cuenta.Nombre}", "OK");
             // Aquí puedes navegar a otra página, ejemplo:
             await Shell.Current.GoToAsync("///Principal");
+            SesionActual.UsuarioActivo = cuenta; // usuarioEncontrado viene de la base de datos
         }
         else
         {

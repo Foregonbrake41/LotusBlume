@@ -15,7 +15,7 @@ namespace LotusBlume_ProyFin.Services
         public DatabaseServices(string dbPath)
         {
             try
-            {
+            { 
                 // Ruta de la base de datos
                 _db = new SQLiteAsyncConnection(dbPath);
 

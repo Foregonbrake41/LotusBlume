@@ -28,10 +28,9 @@
                 <!-- Datos del usuario (tambien se lo pedi a chatgpt, eso ya haces que se refleje de acuerdo a la cuenta)-->
                 <Frame BackgroundColor="#FAFAFA" CornerRadius="20" Padding="20" HasShadow="True" WidthRequest="330">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="Nombre: Mariana Torres" FontSize="16" TextColor="#333"/>
-                        <Label Text="Direccion: 14/02/2005" FontSize="16" TextColor="#333"/>
-                        <Label Text="Usuario: +52 555 123 4567" FontSize="16" TextColor="#333"/>
-                        <Label Text="Correo: mariana.torres@email.com" FontSize="16" TextColor="#333"/>
+                        <Label x:Name="labelNombre" FontSize="16" TextColor="#333"/>
+                        <Label x:Name="labelDireccion" FontSize="16" TextColor="#333"/>
+                        <Label x:Name="labelCorreo" FontSize="16" TextColor="#333"/>
                     </VerticalStackLayout>
                 </Frame>
 

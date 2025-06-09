@@ -7,9 +7,9 @@
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
 
-    <Page.Behaviors>
+    <ContentPage.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="Black"/>
-    </Page.Behaviors>
+    </ContentPage.Behaviors>
 
     <Grid RowDefinitions="Auto,*,Auto">
 
@@ -20,7 +20,7 @@
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="15" Spacing="20">
 
-                <Label Text="Los Favoritos Ahora"
+                <Label Text="Los MÁS comprados!!"
                        FontSize="30"
                        FontAttributes="Bold"
                        TextColor="Black"
@@ -81,7 +81,7 @@
 
                     </HorizontalStackLayout>
                 </Frame>
-                a
+
 
             </VerticalStackLayout>
         </ScrollView>

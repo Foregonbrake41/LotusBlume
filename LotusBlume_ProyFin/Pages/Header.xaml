@@ -4,13 +4,12 @@
              x:Class="LotusBlume_ProyFin.Pages.Header"
              Title="Header">
     <HorizontalStackLayout BackgroundColor="Black" Spacing="5" VerticalOptions="Center" Padding="10">
-        <ImageButton Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="60" Clicked="ClickedPrincipal"/>
+        <ImageButton Source="logo_lotusblume.jpg" HeightRequest="60" WidthRequest="90" Clicked="ClickedPrincipal"/>
         <Frame BackgroundColor="#F0F0F0" CornerRadius="100" HeightRequest="55" WidthRequest="280" HasShadow="False" Padding="10" HorizontalOptions="FillAndExpand">
             <HorizontalStackLayout Spacing="10">
                 <Image Source="lupa.png" HeightRequest="24" WidthRequest="24" />
-                <Entry Placeholder="¿Algo en mente?" WidthRequest="315" FontSize="14"/>
+                <Entry Placeholder="¿Algo en mente?" WidthRequest="210" FontSize="14"/>
             </HorizontalStackLayout>
         </Frame>
-        <Label Text="headereeeeeeeeeeeeee"/>
     </HorizontalStackLayout>
 </ContentPage>

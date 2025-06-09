@@ -37,8 +37,9 @@ public partial class RegistroDeCuenta : ContentPage
             await Shell.Current.GoToAsync("///InicioSesion");
         }
         catch (Exception ex)
-        {//Una cuenta con ese correo ya existe"
-            await DisplayAlert("Error",$"Ocurrió un error: {ex.Message}", "OK");
+        {//
+            await DisplayAlert("Error",
+                 "Una cuenta con ese correo ya existe", "OK");
             return;
         }
     }
