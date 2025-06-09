@@ -2,9 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:LotusBlume_ProyFin.Pages"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="LotusBlume_ProyFin.Pages.Carrito"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="Black"/>
+    </Page.Behaviors>
 
     <Grid RowDefinitions="Auto,*,Auto">
 

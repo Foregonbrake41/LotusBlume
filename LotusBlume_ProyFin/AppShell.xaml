@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:LotusBlume_ProyFin.Pages"
+    xmlns:mct="https://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Shell.FlyoutBehavior="Disabled"
     Title="LotusBlume_ProyFin">
 
@@ -12,7 +13,7 @@
             <On Platform="iOS, Android" Value="False"/>
         </OnPlatform>
     </Shell.NavBarIsVisible>
-    
+
     <ShellContent Route="PantallaDeCarga" ContentTemplate="{DataTemplate local:PantallaDeCarga}" />
     <ShellContent Route="Articulos" ContentTemplate="{DataTemplate local:Articulos}" />
     <ShellContent Route="Carrito" ContentTemplate="{DataTemplate local:Carrito}" />
