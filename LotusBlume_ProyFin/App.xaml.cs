@@ -11,7 +11,7 @@ namespace LotusBlume_ProyFin
         {
             InitializeComponent();
 
-            MainPage = new RegistroDeCuenta();
-        }
+            MainPage = new AppShell();
+        }   
     }
 }

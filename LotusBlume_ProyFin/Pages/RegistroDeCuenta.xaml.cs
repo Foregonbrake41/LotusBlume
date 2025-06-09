@@ -12,4 +12,9 @@ public partial class RegistroDeCuenta : ContentPage
         var button = (ImageButton)sender;
         button.Source = entryPassword.IsPassword ? "invisible_contrasena.png" : "visible_contrasena.png";
     }
+    
+    async public void ClickedRegresar(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///InicioSesion");
+    }
 }
