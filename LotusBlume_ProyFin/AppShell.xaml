@@ -17,7 +17,7 @@
     <ShellContent Route="PantallaDeCarga" ContentTemplate="{DataTemplate local:PantallaDeCarga}" />
     <ShellContent Route="Articulos" ContentTemplate="{DataTemplate local:Articulos}" />
     <ShellContent Route="Carrito" ContentTemplate="{DataTemplate local:Carrito}" />
-    <ShellContent Route="Catalogo" ContentTemplate="{DataTemplate local:Carrito}" />
+    <ShellContent Route="Catalogo" ContentTemplate="{DataTemplate local:Catalogo}" />
     <ShellContent Route="CuentaUsuario" ContentTemplate="{DataTemplate local:CuentaUsuario}" />
     <ShellContent Route="Favoritos" ContentTemplate="{DataTemplate local:Favoritos}" />
     <ShellContent Route="InicioSesion" ContentTemplate="{DataTemplate local:InicioSesion}" />

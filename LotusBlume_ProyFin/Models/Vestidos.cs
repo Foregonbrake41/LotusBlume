@@ -8,16 +8,13 @@ using SQLite;
 namespace LotusBlume_ProyFin.Models
 {
     [Table("Vestidos")]
-    class Vestidos
+    public class Vestidos
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        [MaxLength(100)]
         public string Nombre { get; set; }
-
-        public decimal Precio { get; set; }
-        public int Stock { get; set; }
-        public string ImagenUrl { get; set; } // Ruta de la imagen
+        public double Precio { get; set; }
     }
+
 }

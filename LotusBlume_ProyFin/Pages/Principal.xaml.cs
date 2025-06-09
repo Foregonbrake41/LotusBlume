@@ -6,4 +6,8 @@ public partial class Principal : ContentPage
 	{
 		InitializeComponent();
 	}
+    async public void EnviarArticulo(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///Articulos");
+    }
 }

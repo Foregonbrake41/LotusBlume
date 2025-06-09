@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using LotusBlume_ProyFin.Models;
 using SQLite;
 
 namespace LotusBlume_ProyFin.Services
 {
-    internal class DatabaseServices
+    public class DatabaseServices
     {
-        private SQLiteConnection _db;
+        private SQLiteAsyncConnection _db;
 
-        public DatabaseServices()
+        public DatabaseServices(string dbPath)
         {
             try
             {
                 // Ruta de la base de datos
-                string dbPath = Path.Combine(FileSystem.AppDataDirectory, "amazon.db");
-                _db = new SQLiteConnection(dbPath);
+                _db = new SQLiteAsyncConnection(dbPath);
 
                 // Crea las tablas si no existen
-                _db.CreateTable<Vestidos>();
-                _db.CreateTable<Usuario>();
+                _db.CreateTableAsync<Vestidos>().Wait();
+                _db.CreateTableAsync<Usuario>().Wait();
 
                 Debug.WriteLine("✅ Base de datos creada en: " + dbPath);
             }
@@ -34,12 +32,36 @@ namespace LotusBlume_ProyFin.Services
         }
 
         // Métodos CRUD para Vestidos
-        public List<Vestidos> GetVestidos() => _db.Table<Vestidos>().ToList();
-        public int SaveVestido(Vestidos vestido) => vestido.Id == 0 ? _db.Insert(vestido) : _db.Update(vestido);
-        public int DeleteVestido(Vestidos vestido) => _db.Delete<Vestidos>(vestido.Id);
+        public async Task<List<Vestidos>> GetVestidosAsync()
+        {
+            return await _db.Table<Vestidos>().ToListAsync();
+        }
+
+        public async Task<int> SaveVestidoAsync(Vestidos vestido)
+        {
+            if (vestido.Id == 0)
+                return await _db.InsertAsync(vestido);
+            else
+                return await _db.UpdateAsync(vestido);
+        }
+
+        public async Task<int> DeleteVestidoAsync(Vestidos vestido)
+        {
+            return await _db.DeleteAsync<Vestidos>(vestido.Id);
+        }
 
         // Métodos para Usuarios
-        public Usuario GetUsuario(string email) => _db.Table<Usuario>().FirstOrDefault(u => u.Email == email);
-        public int SaveUsuario(Usuario usuario) => usuario.Id == 0 ? _db.Insert(usuario) : _db.Update(usuario);
+        public async Task<Usuario> GetUsuarioAsync(string email)
+        {
+            return await _db.Table<Usuario>().FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task<int> SaveUsuarioAsync(Usuario usuario)
+        {
+            if (usuario.Id == 0)
+                return await _db.InsertAsync(usuario);
+            else
+                return await _db.UpdateAsync(usuario);
+        }
     }
 }

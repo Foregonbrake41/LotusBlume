@@ -8,7 +8,7 @@ using SQLite;
 namespace LotusBlume_ProyFin.Models
 {
     [Table("Usuarios")]
-    internal class Usuario
+    public class Usuario
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

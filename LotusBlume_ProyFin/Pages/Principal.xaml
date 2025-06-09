@@ -44,7 +44,7 @@
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Frame Padding="0" HasShadow="False" CornerRadius="10" Margin="10,0">
-                                <Image Source="{Binding .}" Aspect="AspectFill" HeightRequest="290" WidthRequest="200"/>
+                                <ImageButton Source="{Binding .}" Aspect="AspectFill" HeightRequest="290" WidthRequest="200" Clicked="EnviarArticulo"/>
                             </Frame>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
