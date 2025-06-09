@@ -100,13 +100,14 @@ VerticalOptions="Center" />
             Clicked="ClickedRegresar"/>
 
                 <Button Text="Solicitar"
-            x:Name="btnRegistrar"
+            x:Name="btnEnviar"
             BackgroundColor="Black"
             TextColor="White"
             FontFamily="Inter"
             FontSize="16"
             FontAttributes="Bold"
             CornerRadius="100"
+            Clicked="btnSolicitar_Clicked"
             HeightRequest="50"
             WidthRequest="180" />
             </HorizontalStackLayout>
