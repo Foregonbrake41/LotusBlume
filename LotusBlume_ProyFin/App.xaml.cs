@@ -1,6 +1,8 @@
 ﻿
 
 
+using LotusBlume_ProyFin.Pages;
+
 namespace LotusBlume_ProyFin
 {
     public partial class App : Application
@@ -9,7 +11,7 @@ namespace LotusBlume_ProyFin
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new RegistroDeCuenta();
         }
     }
 }

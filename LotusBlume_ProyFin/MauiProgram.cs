@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using LotusBlume_ProyFin.Services;
 
 namespace LotusBlume_ProyFin;
 
@@ -20,7 +21,7 @@ public static class MauiProgram
             });
 
         // Continue initializing your .NET MAUI App here
-
+        builder.Services.AddSingleton<DatabaseServices>();
         return builder.Build();
     }
 }
