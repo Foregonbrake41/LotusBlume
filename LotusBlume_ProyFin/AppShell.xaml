@@ -3,13 +3,26 @@
     x:Class="LotusBlume_ProyFin.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:LotusBlume_ProyFin"
+    xmlns:local="clr-namespace:LotusBlume_ProyFin.Pages"
+    xmlns:mct="https://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Shell.FlyoutBehavior="Disabled"
     Title="LotusBlume_ProyFin">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.NavBarIsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="iOS, Android" Value="False"/>
+        </OnPlatform>
+    </Shell.NavBarIsVisible>
+
+    <ShellContent Route="PantallaDeCarga" ContentTemplate="{DataTemplate local:PantallaDeCarga}" />
+    <ShellContent Route="Articulos" ContentTemplate="{DataTemplate local:Articulos}" />
+    <ShellContent Route="Carrito" ContentTemplate="{DataTemplate local:Carrito}" />
+    <ShellContent Route="Catalogo" ContentTemplate="{DataTemplate local:Catalogo}" />
+    <ShellContent Route="CuentaUsuario" ContentTemplate="{DataTemplate local:CuentaUsuario}" />
+    <ShellContent Route="Favoritos" ContentTemplate="{DataTemplate local:Favoritos}" />
+    <ShellContent Route="InicioSesion" ContentTemplate="{DataTemplate local:InicioSesion}" />
+    <ShellContent Route="Principal" ContentTemplate="{DataTemplate local:Principal}" />
+    <ShellContent Route="RecuperarContrasena" ContentTemplate="{DataTemplate local:RecuperarContrasena}" />
+    <ShellContent Route="RegistroDeCuenta" ContentTemplate="{DataTemplate local:RegistroDeCuenta}" />
 
 </Shell>
