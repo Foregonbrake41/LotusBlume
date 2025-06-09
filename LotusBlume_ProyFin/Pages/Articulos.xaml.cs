@@ -1,4 +1,6 @@
 using System.Collections.ObjectModel;
+using LotusBlume_ProyFin.Models;
+using SQLite;
 
 namespace LotusBlume_ProyFin.Pages
 {
@@ -9,6 +11,7 @@ namespace LotusBlume_ProyFin.Pages
         public Articulos()
         {
             InitializeComponent();
+            //MostrarDatosVestidos();
 
             Imagenes = new ObservableCollection<string>
             {
@@ -18,5 +21,17 @@ namespace LotusBlume_ProyFin.Pages
 
             BindingContext = this;
         }
+        //private void MostrarDatosVestidos()
+        //{
+        //    var id_vestido = 1;
+
+        //    if (id_vestido != null)
+        //    {
+        //        lblID.Text = $"{Vestidos.Id}";
+        //        lblNombreVestido.Text = $"Direccion: {Vestidos.Direccion}";
+        //        lblPrecio.Text = $"${Vestidos.Precio}";
+
+        //    }
+        //}
     }
 }

@@ -20,8 +20,8 @@
         <ScrollView Grid.Row="1" Margin="0">
             <VerticalStackLayout Padding="20" Spacing="20">
 
-                <Label Text="ID: 0001" FontSize="14" TextColor="Gray"/>
-                <Label Text="Vestido Elegancia Nocturna" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
+                <Label x:Name="lblID" Text="ID: 0001" FontSize="14" TextColor="Gray"/>
+                <Label x:Name="lblNombreVestido" Text="Vestido Elegancia Nocturna" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
 
                 <!-- Corazón de favorito (haz que funcione tambien este para agregar a favorito, la imagen se llama "corazon-relleno.png") -->
                 <HorizontalStackLayout HorizontalOptions="End">
@@ -46,7 +46,8 @@
                            TextColor="Gray"
                            Grid.Column="0"
                            VerticalOptions="Center"/>
-                    <Label Text="$1,899 MXN"
+                    <Label x:Name="lblPrecio"
+                           Text="$1,899 MXN"
                            FontSize="20"
                            TextColor="DarkRed"
                            FontAttributes="Bold"
@@ -84,7 +85,8 @@
                 </HorizontalStackLayout>
 
                 <!-- Descripción de vestido-->
-                <Label Text="Vestido largo ideal para eventos de noche. Confeccionado en satín con corte elegante y espalda descubierta. Disponible en varias tallas."
+                <Label x:Name="lblDescripción"
+                       Text="Vestido largo ideal para eventos de noche. Confeccionado en satín con corte elegante y espalda descubierta. Disponible en varias tallas."
                        FontSize="14"
                        TextColor="Black"
                        LineBreakMode="WordWrap"/>

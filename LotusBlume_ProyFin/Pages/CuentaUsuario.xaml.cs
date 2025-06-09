@@ -5,7 +5,7 @@ public partial class CuentaUsuario : ContentPage
 {
 	public CuentaUsuario()
 	{
-		InitializeComponent();
+		InitializeComponent();  
         MostrarDatosUsuario();
 
     }
