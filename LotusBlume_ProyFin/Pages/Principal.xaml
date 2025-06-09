@@ -60,23 +60,23 @@
                 <ScrollView Orientation="Horizontal" HeightRequest="220">
                     <HorizontalStackLayout Spacing="10">
                         <VerticalStackLayout>
-                            <Image Source="vestido_noche_1.png" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_noche_1.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Brilla con elegancia" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_noche_2.png" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_noche_2.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Glamour que enamora" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_noche_3.png" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_noche_3.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Luces, cámara... tú" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_noche_4.png" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_noche_4.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Perfecta para la ocasión" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_noche_5.png" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_noche_5.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Destaca esta noche" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
@@ -91,23 +91,23 @@
                 <ScrollView Orientation="Horizontal" HeightRequest="220">
                     <HorizontalStackLayout Spacing="10">
                         <VerticalStackLayout>
-                            <Image Source="vestido_picnic_1.jpg" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_picnic_1.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Frescura y encanto" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_picnic_2.jpg" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_picnic_2.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Color para tu tarde" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_picnic_3.jpg" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_picnic_3.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Dulce y delicada" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_picnic_4.jpg" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_picnic_4.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Naturalmente tú" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                         <VerticalStackLayout>
-                            <Image Source="vestido_picnic_5.jpg" HeightRequest="160" WidthRequest="120" />
+                            <ImageButton Source="vestido_picnic_5.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
                             <Label Text="Estilo sin esfuerzo" FontSize="12" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>

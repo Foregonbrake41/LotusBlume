@@ -10,4 +10,8 @@ public partial class Principal : ContentPage
     {
         await Shell.Current.GoToAsync("///Articulos");
     }
+    async public void EnviarCatalogo(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///Catalogo");
+    }
 }

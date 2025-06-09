@@ -20,8 +20,8 @@
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="15" Spacing="20">
 
-                <Label Text="Mis Favoritos (n)"
-                       FontSize="22"
+                <Label Text="Los Favoritos Ahora"
+                       FontSize="30"
                        FontAttributes="Bold"
                        TextColor="Black"
                        HorizontalOptions="Center" />
@@ -45,6 +45,43 @@
 
                     </HorizontalStackLayout>
                 </Frame>
+                <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True">
+                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+
+                        <!-- Imagen del vestido -->
+                        <Image Source="vestido_xv_1.png" HeightRequest="120" WidthRequest="90" Aspect="AspectFill" />
+
+                        <!-- Detalles del vestido -->
+                        <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
+                            <Label Text="Escencia Roja" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                            <Label Text="$2,499 MXN" FontSize="16" TextColor="DarkRed" />
+                            <Button Text="Añadir al carrito" BackgroundColor="#E91E63" TextColor="White" CornerRadius="10" Padding="8,4" FontSize="14" WidthRequest="150"/>
+                        </VerticalStackLayout>
+
+                        <!-- Ícono para eliminar de favoritos -->
+                        <Image Source="corazon_relleno.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
+
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True">
+                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+
+                        <!-- Imagen del vestido -->
+                        <Image Source="vestido_xv_3.png" HeightRequest="120" WidthRequest="90" Aspect="AspectFill" />
+
+                        <!-- Detalles del vestido -->
+                        <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
+                            <Label Text="Sueño de Tul" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                            <Label Text="$3,099 MXN" FontSize="16" TextColor="DarkRed" />
+                            <Button Text="Añadir al carrito" BackgroundColor="#E91E63" TextColor="White" CornerRadius="10" Padding="8,4" FontSize="14" WidthRequest="150"/>
+                        </VerticalStackLayout>
+
+                        <!-- Ícono para eliminar de favoritos -->
+                        <Image Source="corazon_relleno.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
+
+                    </HorizontalStackLayout>
+                </Frame>
+                a
 
             </VerticalStackLayout>
         </ScrollView>

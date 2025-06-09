@@ -41,7 +41,7 @@
 
                 <!-- Autor y precio (le pedi a chatgpt que se inventara unos)-->
                 <Grid ColumnDefinitions="*,Auto" Padding="10,5">
-                    <Label Text="By: Clara Delgado"
+                    <Label Text="By: Elizabeth Lopez"
                            FontSize="16"
                            TextColor="Gray"
                            Grid.Column="0"
