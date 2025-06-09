@@ -6,4 +6,8 @@ public partial class CuentaUsuario : ContentPage
 	{
 		InitializeComponent();
 	}
+    async public void ClickedCerrarSesion(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///InicioSesion");
+    }
 }

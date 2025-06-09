@@ -18,7 +18,7 @@
 
         <!-- Contenido -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="25" HorizontalOptions="Center">
+            <VerticalStackLayout Padding="20" Spacing="25" HorizontalOptions="FillAndExpand">
 
                 <!-- Imagen de perfil -->
                 <Frame BackgroundColor="#F4F4F4" CornerRadius="100" HeightRequest="180" WidthRequest="180" HasShadow="True" HorizontalOptions="Center">
@@ -29,10 +29,9 @@
                 <Frame BackgroundColor="#FAFAFA" CornerRadius="20" Padding="20" HasShadow="True" WidthRequest="330">
                     <VerticalStackLayout Spacing="12">
                         <Label Text="Nombre: Mariana Torres" FontSize="16" TextColor="#333"/>
-                        <Label Text="Fecha de nacimiento: 14/02/2005" FontSize="16" TextColor="#333"/>
-                        <Label Text="Teléfono: +52 555 123 4567" FontSize="16" TextColor="#333"/>
+                        <Label Text="Direccion: 14/02/2005" FontSize="16" TextColor="#333"/>
+                        <Label Text="Usuario: +52 555 123 4567" FontSize="16" TextColor="#333"/>
                         <Label Text="Correo: mariana.torres@email.com" FontSize="16" TextColor="#333"/>
-                        <Label Text="Cuenta creada: 01/03/2024" FontSize="16" TextColor="#333"/>
                     </VerticalStackLayout>
                 </Frame>
 
@@ -45,7 +44,8 @@
                         CornerRadius="18"
                         Padding="14"
                         WidthRequest="250"
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="Center"
+                        Clicked="ClickedCerrarSesion"/>
             </VerticalStackLayout>
         </ScrollView>
 

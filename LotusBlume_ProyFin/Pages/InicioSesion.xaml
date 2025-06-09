@@ -132,6 +132,7 @@
                     FontFamily="Inter"
                     FontSize="16"
                     FontAttributes="Bold"
+                    Clicked="ClickedInicioSesion"
                     CornerRadius="100"
                     HeightRequest="50"
                     WidthRequest="200"

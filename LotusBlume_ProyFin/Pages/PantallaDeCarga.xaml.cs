@@ -7,7 +7,7 @@ public partial class PantallaDeCarga : ContentPage
 		InitializeComponent();
 
         // Temporizador para redirigir después de 3 segundos
-        Device.StartTimer(TimeSpan.FromSeconds(7), () =>
+        Device.StartTimer(TimeSpan.FromSeconds(3), () =>
         {
             Shell.Current.GoToAsync("///InicioSesion");
             return false;

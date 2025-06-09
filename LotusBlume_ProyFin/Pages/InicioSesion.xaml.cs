@@ -21,4 +21,8 @@ public partial class InicioSesion : ContentPage
     {
         await Shell.Current.GoToAsync("///RegistroDeCuenta");
     }
+    async public void ClickedInicioSesion(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///Principal");
+    }
 }
