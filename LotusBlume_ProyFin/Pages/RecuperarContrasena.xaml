@@ -18,23 +18,23 @@
             <!-- COMENTARIO: como segun yo esta pagina esta cabrona, nadamas ponle que al enviar diga que te salte un alert diciendo que se envio con exito el codigo o algo asi -->
 
             <!-- Encabezado Lotus Blume -->
-            <HorizontalStackLayout BackgroundColor="Black" Padding="120,10" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,20">
+            <HorizontalStackLayout BackgroundColor="Black" Padding="93,10" Spacing="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="0,0,0,20">
                 <Image Source="logo_lotusblume.jpg"
-                   HeightRequest="80"
-                   WidthRequest="80"
-                   VerticalOptions="Center" />
+HeightRequest="80"
+WidthRequest="80"
+VerticalOptions="Center" />
                 <VerticalStackLayout VerticalOptions="Center" Spacing="2">
                     <Label Text="Lotus Blume"
-                       FontSize="26"
-                       FontFamily="Inter"
-                       FontAttributes="Bold"
-                       TextColor="White"
-                       HorizontalOptions="Center" />
+    FontSize="26"
+    FontFamily="Inter"
+    FontAttributes="Bold"
+    TextColor="White"
+    HorizontalOptions="Center" />
                     <Label Text="Tienda de ropa"
-                       FontSize="16"
-                       FontFamily="Inter"
-                       TextColor="White"
-                       HorizontalOptions="Center" />
+    FontSize="16"
+    FontFamily="Inter"
+    TextColor="White"
+    HorizontalOptions="Center" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
 
@@ -53,7 +53,7 @@
                Margin="0,0,0,50" />
 
             <!-- Texto explicativo central -->
-            <Label Text="Por favor, ingresa tu correo electrónico. Te enviaremos un código temporal para que puedas restablecer tu contraseña de forma segura."
+            <Label Text="Por favor, ingresa tu correo electrónico. Si existe la cuenta podrás solicitar la contraseña."
                    FontSize="16"
                    FontFamily="Inter"
                    TextColor="Black"
@@ -88,26 +88,27 @@
             <!-- Botones de volver y enviar -->
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,20,0,30">
                 <Button Text="Volver"
-                    x:Name="btnVolver"
-                    BackgroundColor="Black"
-                    TextColor="White"
-                    FontFamily="Inter"
-                    FontSize="16"
-                    FontAttributes="Bold"
-                    CornerRadius="100"
-                    HeightRequest="50"
-                    WidthRequest="200" />
+            x:Name="btnVolver"
+            BackgroundColor="Black"
+            TextColor="White"
+            FontFamily="Inter"
+            FontSize="16"
+            FontAttributes="Bold"
+            CornerRadius="100"
+            HeightRequest="50"
+            WidthRequest="180" 
+            Clicked="ClickedRegresar"/>
 
-                <Button Text="Enviar"
-                    x:Name="btnEnviar"
-                    BackgroundColor="Black"
-                    TextColor="White"
-                    FontFamily="Inter"
-                    FontSize="16"
-                    FontAttributes="Bold"
-                    CornerRadius="100"
-                    HeightRequest="50"
-                    WidthRequest="200" />
+                <Button Text="Solicitar"
+            x:Name="btnRegistrar"
+            BackgroundColor="Black"
+            TextColor="White"
+            FontFamily="Inter"
+            FontSize="16"
+            FontAttributes="Bold"
+            CornerRadius="100"
+            HeightRequest="50"
+            WidthRequest="180" />
             </HorizontalStackLayout>
 
         </VerticalStackLayout>

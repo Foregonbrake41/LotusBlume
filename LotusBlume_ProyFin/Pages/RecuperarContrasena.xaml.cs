@@ -6,4 +6,8 @@ public partial class RecuperarContrasena : ContentPage
 	{
 		InitializeComponent();
 	}
+    async public void ClickedRegresar(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("///InicioSesion");
+    }
 }
