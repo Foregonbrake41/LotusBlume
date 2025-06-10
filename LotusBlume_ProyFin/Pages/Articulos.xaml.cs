@@ -52,7 +52,7 @@ namespace LotusBlume_ProyFin.Pages
             // Cambiar entre corazón lleno/vacío
             var image = (Image)sender;
             image.Source = (image.Source as FileImageSource)?.File == "corazon.png"
-                ? "corazon-relleno.png"
+                ? "corazon_relleno.png"
                 : "corazon.png";
         }
     }

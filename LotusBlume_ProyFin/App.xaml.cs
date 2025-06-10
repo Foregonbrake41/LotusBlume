@@ -33,7 +33,7 @@
                 {
                     var vestidos = new List<Vestidos>
             {
-                new() { Nombre = "Vestido Esencia Roja", Precio = 2499 },
+                new() { Nombre = "Esencia Roja", Precio = 2499 },
                 new() { Nombre = "Encanto de Encaje", Precio = 2799 },
                 new() { Nombre = "Sueño de Tul", Precio = 3099 },
                 new() { Nombre = "Noche Carmesí", Precio = 1899 },
