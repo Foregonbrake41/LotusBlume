@@ -2,6 +2,7 @@ namespace LotusBlume_ProyFin.Pages;
 
 public partial class Principal : ContentPage
 {
+    int id = 1;
 	public Principal()
 	{
 		InitializeComponent();
@@ -15,3 +16,4 @@ public partial class Principal : ContentPage
         await Shell.Current.GoToAsync("///Catalogo");
     }
 }
+    
