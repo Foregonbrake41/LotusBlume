@@ -25,11 +25,12 @@ namespace LotusBlume_ProyFin.Models
             get => string.IsNullOrEmpty(ImagenesJson) ? new List<string>() : JsonSerializer.Deserialize<List<string>>(ImagenesJson);
             set => ImagenesJson = JsonSerializer.Serialize(value);
         }
-
+        [Ignore]
+        public string ImagenPrincipal => Imagenes?.FirstOrDefault() ?? "imagen_default.png";
         public string Descripcion { get; set; }
         public string Tipo { get; set; }
         [Ignore]
-        public string ImagenPrincipal => Imagenes?.FirstOrDefault();
+        public bool EsFavorito { get; set; } // No se persiste en DB
     }
 
 }

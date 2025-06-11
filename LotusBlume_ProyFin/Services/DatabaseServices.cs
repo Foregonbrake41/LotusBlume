@@ -30,13 +30,26 @@ namespace LotusBlume_ProyFin.Services
                 Debug.WriteLine("❌ Error al iniciar la BD: " + ex.Message);
             }
         }
+        public SQLiteAsyncConnection GetDatabaseConnection()
+        {
+            return _db; // Método público para acceder a _db
+        }
 
         // Métodos CRUD para Vestidos
         public async Task<List<Vestidos>> GetVestidosAsync()
         {
             return await _db.Table<Vestidos>().ToListAsync();
         }
-
+        
+        public async Task MarcarComoFavorito(int vestidoId, bool esFavorito)
+        {
+            var vestido = await _db.Table<Vestidos>().FirstOrDefaultAsync(v => v.Id == vestidoId);
+            if (vestido != null)
+            {
+                vestido.EsFavorito = esFavorito;
+                await _db.UpdateAsync(vestido);
+            }
+        }
         public async Task<int> SaveVestidoAsync(Vestidos vestido)
         {
             if (vestido.Id == 0)

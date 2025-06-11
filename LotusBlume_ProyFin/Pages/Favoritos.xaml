@@ -1,92 +1,80 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:LotusBlume_ProyFin.Pages"
+             xmlns:local="clr-namespace:LotusBlume_ProyFin.Pages"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="LotusBlume_ProyFin.Pages.Favoritos"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.Behaviors>
+    <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="Black"/>
-    </ContentPage.Behaviors>
+    </Page.Behaviors>
 
     <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- Encabezado con logo y barra de búsqueda -->
-        <views:Header Grid.Row="0" HeightRequest="81"/>
+        <local:Header Grid.Row="0" HeightRequest="81"/>
 
         <!-- Contenido principal -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="15" Spacing="20">
 
-                <Label Text="Los MÁS comprados!!"
-                       FontSize="30"
+                <Label x:Name="tituloFavoritos"
+                       Text="Mis Favoritos (0)"
+                       FontSize="22"
                        FontAttributes="Bold"
                        TextColor="Black"
                        HorizontalOptions="Center" />
 
                 <!-- Artículo en favoritos estilo horizontal -->
-                <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                <CollectionView ItemsSource="{Binding FavoritosList}" Margin="0,10">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True" Margin="0,0,0,15">
+                                <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
 
-                        <!-- Imagen del vestido -->
-                        <Image Source="vestido_noche_1.png" HeightRequest="120" WidthRequest="90" Aspect="AspectFill" />
+                                    <Image Source="{Binding ImagenPrincipal}" 
+                           HeightRequest="120" 
+                           WidthRequest="90" 
+                           Aspect="AspectFill" />
 
-                        <!-- Detalles del vestido -->
-                        <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
-                            <Label Text="Noche Carmesí" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                            <Label Text="$1,899 MXN" FontSize="16" TextColor="DarkRed" />
-                            <Button Text="Añadir al carrito" BackgroundColor="#E91E63" TextColor="White" CornerRadius="10" Padding="8,4" FontSize="14" WidthRequest="150"/>
-                        </VerticalStackLayout>
+                                    <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding Nombre}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                        <Label Text="{Binding Precio, StringFormat='${0:N2} MXN'}" FontSize="16" TextColor="DarkRed" />
+                                        <Button Text="Añadir al carrito" 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:Favoritos}}, Path=BindingContext.OnAddToCartClicked}"
+                                CommandParameter="{Binding .}"
+                                BackgroundColor="#E91E63" 
+                                TextColor="White" 
+                                CornerRadius="10" 
+                                Padding="8,4" 
+                                FontSize="14" 
+                                WidthRequest="150"/>
+                                    </VerticalStackLayout>
 
-                        <!-- Ícono para eliminar de favoritos -->
-                        <Image Source="corazon_relleno.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
+                                    <Image Source="corazon_relleno.png" 
+                           HeightRequest="30" 
+                           WidthRequest="30" 
+                           HorizontalOptions="End" 
+                           VerticalOptions="Center">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:Favoritos}}, Path=BindingContext.OnEliminarFavorito}"
+                                CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
 
-                    </HorizontalStackLayout>
-                </Frame>
-                <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
-
-                        <!-- Imagen del vestido -->
-                        <Image Source="vestido_xv_1.png" HeightRequest="120" WidthRequest="90" Aspect="AspectFill" />
-
-                        <!-- Detalles del vestido -->
-                        <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
-                            <Label Text="Escencia Roja" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                            <Label Text="$2,499 MXN" FontSize="16" TextColor="DarkRed" />
-                            <Button Text="Añadir al carrito" BackgroundColor="#E91E63" TextColor="White" CornerRadius="10" Padding="8,4" FontSize="14" WidthRequest="150"/>
-                        </VerticalStackLayout>
-
-                        <!-- Ícono para eliminar de favoritos -->
-                        <Image Source="corazon_relleno.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
-
-                    </HorizontalStackLayout>
-                </Frame>
-                <Frame BorderColor="#D9D9D9" CornerRadius="10" Padding="10" HasShadow="True">
-                    <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
-
-                        <!-- Imagen del vestido -->
-                        <Image Source="vestido_xv_3.png" HeightRequest="120" WidthRequest="90" Aspect="AspectFill" />
-
-                        <!-- Detalles del vestido -->
-                        <VerticalStackLayout Spacing="5" VerticalOptions="CenterAndExpand">
-                            <Label Text="Sueño de Tul" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                            <Label Text="$3,099 MXN" FontSize="16" TextColor="DarkRed" />
-                            <Button Text="Añadir al carrito" BackgroundColor="#E91E63" TextColor="White" CornerRadius="10" Padding="8,4" FontSize="14" WidthRequest="150"/>
-                        </VerticalStackLayout>
-
-                        <!-- Ícono para eliminar de favoritos -->
-                        <Image Source="corazon_relleno.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
-
-                    </HorizontalStackLayout>
-                </Frame>
-
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
             </VerticalStackLayout>
         </ScrollView>
 
         <!-- Barra de navegación inferior con divisores -->
-        <views:Navbar Grid.Row="2"/>
+        <local:Navbar Grid.Row="2"/>
     </Grid>
 </ContentPage>
