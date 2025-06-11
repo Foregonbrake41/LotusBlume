@@ -48,7 +48,16 @@ namespace LotusBlume_ProyFin.Pages
         {
             if (sender is ImageButton imageButton && imageButton.BindingContext is VestidoPreview vestido)
             {
-                await Shell.Current.GoToAsync($"///{nameof(Articulos)}?id={vestido.Id}");
+                var vestidoCompleto = await App.SQLiteDB.GetVestidoByIdAsync(vestido.Id);
+
+                // Pasa las imágenes como parámetro de navegación
+                var parameters = new Dictionary<string, object>
+        {
+            { "id", vestido.Id },
+            { "imagenes", vestidoCompleto.Imagenes }
+        };
+
+                await Shell.Current.GoToAsync("///"+nameof(Articulos), parameters);
             }
         }
 

@@ -20,7 +20,7 @@
         <ScrollView Grid.Row="1" Margin="0">
             <VerticalStackLayout Padding="20" Spacing="20">
 
-                <Label x:Name="lblID" Text="ID: 0001" FontSize="14" TextColor="Gray"/>
+                <Label x:Name="lblID" Text="ID: 1" FontSize="14" TextColor="Gray"/>
                 <Label x:Name="lblNombreVestido" Text="Vestido Elegancia Nocturna" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
 
                 <!-- Corazón de favorito (ahora con funcionalidad) -->
@@ -33,16 +33,15 @@
                 </HorizontalStackLayout>
 
                 <!-- Carrusel de imágenes del articulo con un accesorio (vamos a decir que van en combo) -->
-                <CarouselView HeightRequest="300" ItemsSource="{Binding Imagenes}">
+                <CarouselView ItemsSource="{Binding Imagenes}" HeightRequest="300">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <Grid HeightRequest="300" WidthRequest="300">
-                                <Image Source="{Binding}" Aspect="AspectFit" />
-                            </Grid>
+                            <Image Source="{Binding}" Aspect="AspectFit" HeightRequest="300"/>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
-                
+
+
                 <Grid ColumnDefinitions="*,Auto" Padding="10,5">
                     <Label Text="By: Elizabeth Lopez"
                            FontSize="16"
