@@ -28,6 +28,8 @@ namespace LotusBlume_ProyFin.Models
 
         public string Descripcion { get; set; }
         public string Tipo { get; set; }
+        [Ignore]
+        public string ImagenPrincipal => Imagenes?.FirstOrDefault();
     }
 
 }

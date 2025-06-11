@@ -50,6 +50,7 @@
                    Margin="0,0,0,30"/>
 
             <!-- Campo Usuario -->
+            <!--ELIMINAR ESTE CAMPO-->
             <VerticalStackLayout Spacing="5" Margin="40,5,40,20">
                 <HorizontalStackLayout Spacing="10" Margin="0,0,0,5">
                     <Image Source="logo_correo.jpg"
@@ -66,6 +67,7 @@
                 <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
                     <Entry Placeholder="Ingrese su usuario"
                            x:Name="entryCorreo"
+                           Text="abrahamesaucz7@gmail.com"
                            BackgroundColor="Transparent"
                            HeightRequest="40"
                            WidthRequest="375"/>
@@ -89,13 +91,15 @@
                 <Frame HasShadow="False" Padding="0" CornerRadius="100" BackgroundColor="#F0F0F0" WidthRequest="400">
                     <Grid>
                         <!-- Usamos Grid para organizar Entry + Image -->
+                        <!--ELIMINAR ESTE CAMPO-->
                         <Entry x:Name="entryContrasena" 
-            Placeholder="Ingrese su contraseña"
-            IsPassword="True"
-            BackgroundColor="Transparent"
-            HeightRequest="40"
-            WidthRequest="320" 
-            Margin="10,0,60,0"/>
+                               Placeholder="Ingrese su contraseña"
+                               Text="Nigga" 
+                               IsPassword="True"
+                               BackgroundColor="Transparent"
+                               HeightRequest="40"
+                               WidthRequest="320" 
+                               Margin="10,0,60,0"/>        
                         <!-- Margen derecho para el ojito -->
 
                         <!-- Ojito (alineado a la derecha dentro del Frame) -->

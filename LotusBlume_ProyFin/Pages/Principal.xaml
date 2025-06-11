@@ -33,18 +33,16 @@
                        TextColor="Black" />
 
                 <!-- Carrusel de vestidos XV -->
-                <CarouselView HeightRequest="300" Loop="True" IndicatorView="indicatorDestacados">
-                    <CarouselView.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>vestido_xv_1.png</x:String>
-                            <x:String>vestido_xv_2.png</x:String>
-                            <x:String>vestido_xv_3.png</x:String>
-                        </x:Array>
-                    </CarouselView.ItemsSource>
+                <CarouselView ItemsSource="{Binding VestidosXV}" HeightRequest="300" Loop="True" IndicatorView="indicatorDestacados">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Frame Padding="0" HasShadow="False" CornerRadius="10" Margin="10,0">
-                                <ImageButton Source="{Binding .}" Aspect="AspectFill" HeightRequest="290" WidthRequest="200" Clicked="EnviarArticulo"/>
+                                <ImageButton Source="{Binding Imagen}" 
+                            Aspect="AspectFill" 
+                            HeightRequest="290" 
+                            WidthRequest="200"
+                            BindingContext="{Binding .}"
+                            Clicked="OnVestidoClicked"/>
                             </Frame>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
@@ -53,67 +51,43 @@
 
                 <!-- Sección: ¿Alguna fiesta esta noche? -->
                 <Label Text="¿Alguna fiesta esta noche?"
-                       FontSize="20"
-                       FontAttributes="Bold"
-                       FontFamily="Inter"
-                       TextColor="Black" />
+                       FontSize="20"/>
                 <ScrollView Orientation="Horizontal" HeightRequest="220">
-                    <HorizontalStackLayout Spacing="10">
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_noche_1.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Brilla con elegancia" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_noche_2.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Glamour que enamora" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_noche_3.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Luces, cámara... tú" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_noche_4.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Perfecta para la ocasión" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_noche_5.png" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Destaca esta noche" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="10" BindableLayout.ItemsSource="{Binding VestidosNoche}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <VerticalStackLayout>
+                                    <ImageButton Source="{Binding Imagen}" 
+                                HeightRequest="160" 
+                                WidthRequest="120"
+                                BindingContext="{Binding .}"
+                                Clicked="OnVestidoClicked"/>
+                                    <Label Text="{Binding Descripcion}" FontSize="12" HorizontalTextAlignment="Center" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
                     </HorizontalStackLayout>
                 </ScrollView>
 
                 <!-- Sección: ¡Pic-nic por la tarde! -->
                 <Label Text="¡Pic-nic por la tarde!"
-                       FontSize="20"
-                       FontAttributes="Bold"
-                       FontFamily="Inter"
-                       TextColor="Black" />
+                       FontSize="20"/>
                 <ScrollView Orientation="Horizontal" HeightRequest="220">
-                    <HorizontalStackLayout Spacing="10">
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_picnic_1.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Frescura y encanto" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_picnic_2.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Color para tu tarde" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_picnic_3.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Dulce y delicada" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_picnic_4.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Naturalmente tú" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
-                        <VerticalStackLayout>
-                            <ImageButton Source="vestido_picnic_5.jpg" HeightRequest="160" WidthRequest="120" Clicked="EnviarCatalogo"/>
-                            <Label Text="Estilo sin esfuerzo" FontSize="12" HorizontalTextAlignment="Center" />
-                        </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="10" BindableLayout.ItemsSource="{Binding VestidosPicnic}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <VerticalStackLayout>
+                                    <ImageButton Source="{Binding Imagen}" 
+                                HeightRequest="160" 
+                                WidthRequest="120"
+                                BindingContext="{Binding .}"
+                                Clicked="OnVestidoClicked"/>
+                                    <Label Text="{Binding Descripcion}" FontSize="12" HorizontalTextAlignment="Center" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
                     </HorizontalStackLayout>
                 </ScrollView>
-
-
             </VerticalStackLayout>
         </ScrollView>
 

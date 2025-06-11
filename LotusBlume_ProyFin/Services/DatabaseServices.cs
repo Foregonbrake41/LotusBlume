@@ -63,5 +63,10 @@ namespace LotusBlume_ProyFin.Services
             else
                 return await _db.UpdateAsync(usuario);
         }
+        //Obtener vestidos por ID
+        public async Task<Vestidos> GetVestidoByIdAsync(int id)
+        {
+            return await _db.Table<Vestidos>().FirstOrDefaultAsync(v => v.Id == id);
+        }
     }
 }
